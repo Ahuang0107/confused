@@ -13,7 +13,10 @@
     "prebuild": "rimraf dist",
     "build:esm": "cross-env BABEL_ENV=esm babel src --extensions .ts,.tsx -d dist/esm --source-maps",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist/cjs --source-maps",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types"
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "build": "npm run build:esm & npm run build:cjs & npm run build:types",
+    "prepublish": "npm run build",
+    "publish": "npm publish"
   },
   "author": "elase.huang",
   "license": "ISC",
