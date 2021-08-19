@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
+import {global} from "./global-styles";
 
 export const RectangleButton = (props: {
     name?: string,
@@ -16,7 +17,9 @@ export const RectangleButton = (props: {
         </RealButton>
     )
 }
+
 const RealButton = styled.button`
+  ${global};
   width: 40px;
   height: 24px;
   background-color: #303640;

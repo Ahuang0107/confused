@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import {global} from "./global-styles";
 
 export const RectangleStateButton = (props: {
     name?: string,
@@ -23,6 +24,7 @@ export const RectangleStateButton = (props: {
 const RealButton = styled.button<{
     isActive: boolean
 }>`
+  ${global};
   width: 40px;
   height: 24px;
   background-color: ${props => props.isActive ? '#2681FF' : '#303640'};
