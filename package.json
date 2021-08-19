@@ -1,0 +1,10 @@
+{
+  "name": "confused",
+  "version": "1.0.0",
+  "description": "a little ui lib",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "elase.huang",
+  "license": "ISC"
+}
