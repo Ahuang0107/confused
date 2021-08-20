@@ -1,6 +1,6 @@
 {
   "name": "confused",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "a little ui lib",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -13,12 +13,8 @@
     "prebuild": "rimraf dist",
     "build:esm": "cross-env BABEL_ENV=esm babel src --extensions .ts,.tsx -d dist/esm --source-maps",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist/cjs --source-maps",
-    "build:umd": "cross-env NODE_ENV=umd webpack",
-    "build:umd:min": "cross-env NODE_ENV=umd:min webpack",
-    "build:iife": "cross-env NODE_ENV=iife webpack",
-    "build:iife:min": "cross-env NODE_ENV=iife:min webpack",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "build": "yarn run build:esm & yarn run build:cjs & yarn run build:umd & yarn run build:umd:min & yarn run build:iife & yarn run build:iife:min & yarn run build:types",
+    "build": "yarn run build:esm & yarn run build:cjs & yarn run build:types",
     "prepublish": "yarn run build",
     "publish": "yarn npm publish",
     "storybook": "start-storybook -p 6006",
@@ -29,7 +25,6 @@
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
@@ -40,11 +35,8 @@
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.12",
-    "babel-loader": "^8.2.2",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.3.5",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0"
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
     "react": "^17.0.2",

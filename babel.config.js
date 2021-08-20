@@ -23,7 +23,7 @@ module.exports = function (api) {
 
     // execute from left to fight
     const plugins = [
-        "@babel/plugin-proposal-class-properties",
+        "inline-react-svg",
     ]
 
     return {
