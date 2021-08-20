@@ -4,3 +4,13 @@ package-lock.json
 /dist
 
 .idea
+
+# yarn ignore (with zero installs)
+yarn.lock
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
