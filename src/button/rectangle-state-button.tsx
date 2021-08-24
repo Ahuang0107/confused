@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import {global} from "./global-styles";
+import {GlobalStyle} from "../global/global-styles";
 
 export const RectangleStateButton = (props: {
     name?: string,
@@ -12,22 +12,25 @@ export const RectangleStateButton = (props: {
     const [isActive, setIsActive] = useState(true)
 
     return (
-        <RealButton isActive={isActive}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                        onClick(event)
-                        setIsActive(!isActive)
-                    }}>
-            {props.children}
-        </RealButton>
+        <>
+            <GlobalStyle/>
+            <RealButton isActive={isActive}
+                        onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                            onClick(event)
+                            setIsActive(!isActive)
+                        }}>
+                {props.children}
+            </RealButton>
+        </>
+
     )
 }
 const RealButton = styled.button<{
     isActive: boolean
 }>`
-  ${global};
   width: 40px;
   height: 24px;
-  background-color: ${props => props.isActive ? '#2681FF' : '#303640'};
+  background-color: ${props => props.isActive ? 'var(--datav-main-color)' : 'var(--datav-btn-bg-default)'};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +40,6 @@ const RealButton = styled.button<{
   cursor: pointer;
 
   &:hover {
-    background-color: ${props => props.isActive ? '#409fff' : '#414750'};
+    background-color: ${props => props.isActive ? 'var(--datav-main-hover-color)' : 'var(--datav-btn-bg-hover)'};
   }
 `

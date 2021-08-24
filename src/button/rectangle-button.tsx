@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import {global} from "./global-styles";
+import {GlobalStyle} from "../global/global-styles";
 
 export const RectangleButton = (props: {
     name?: string,
@@ -10,19 +10,22 @@ export const RectangleButton = (props: {
     const {onClick} = props
 
     return (
-        <RealButton onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-            onClick(event)
-        }}>
-            {props.children}
-        </RealButton>
+        <>
+            <GlobalStyle/>
+            <RealButton onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+                onClick(event)
+            }}>
+                {props.children}
+            </RealButton>
+        </>
+
     )
 }
 
 const RealButton = styled.button`
-  ${global};
   width: 40px;
   height: 24px;
-  background-color: #303640;
+  background-color: var(--datav-btn-bg-default);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,10 +35,10 @@ const RealButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #414750;
+    background-color: var(--datav-btn-bg-hover);
   }
 
   &:active {
-    background-color: #2681FF;
+    background-color: var(--datav-main-color);
   }
 `
