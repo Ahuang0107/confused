@@ -1,8 +1,8 @@
+# production
 node_modules
-package-lock.json
-
 /dist
 
+# ide ignore
 .idea
 
 # yarn ignore (with zero installs)
@@ -14,3 +14,6 @@ yarn.lock
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# storybook ignore
+storybook-static
