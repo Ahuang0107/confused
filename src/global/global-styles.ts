@@ -11,6 +11,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
+    --focus-color: #18a0fb;
+    --background-color: white;
+    --border-color: #ebebeb;
+    --placeholder-font-color: #bfbfbf;
+    --main-font-color: #373737;
+
     --datav-panel-color: #1d2127;
     --datav-panel-item-color: #181a1c;
     --datav-panel-item-bg: #1b1f25;
