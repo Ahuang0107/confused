@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {PullDownSVG} from "../icon";
 
 const RealSelect = styled.div`
   position: relative;
@@ -53,17 +54,26 @@ const Option = styled.div`
 const PullDown = styled.span`
   user-select: none;
 
-  right: 2px;
+  right: 3px;
   box-sizing: border-box;
   position: absolute;
   height: 100%;
 
   /*v-center the svg element it content*/
-  top: 3px;
+  line-height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const PullDownIcon = styled(PullDownSVG)`
+  width: 12px;
+  height: 12px;
 `
 export {
   RealSelect,
   Options,
   Option,
   PullDown,
+  PullDownIcon,
 }

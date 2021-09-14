@@ -1,8 +1,7 @@
 import * as React from "react"
 import {useState} from "react"
 import {GlobalStyle} from "../global/global-styles"
-import {Option, Options, PullDown, RealSelect} from "./style";
-import {PullDownIcon} from "../icon";
+import {Option, Options, PullDown, PullDownIcon, RealSelect} from "./style";
 
 declare type Option = {
   key: number,

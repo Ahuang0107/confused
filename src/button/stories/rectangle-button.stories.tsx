@@ -2,7 +2,7 @@ import React from 'react';
 import {Meta} from '@storybook/react';
 
 import {RectangleButton} from "../rectangle-button";
-import {LayerIcon} from "../../icon/index";
+import {LayerSVG} from "../../icon/index";
 
 export default {
     title: 'Example/RectangleButton',
@@ -11,5 +11,5 @@ export default {
 
 export const Primary: React.VFC<{}> = () => <RectangleButton
     onClick={() => console.log('RectangleButton has been clicked')}>
-    <LayerIcon/>
+  <LayerSVG/>
 </RectangleButton>;

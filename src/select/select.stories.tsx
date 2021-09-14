@@ -11,7 +11,7 @@ export const Primary: React.VFC<{}> = () => {
   const options = [
     {
       key: 1,
-      value: "R7 5600X"
+      value: "R5 5600X"
     },
     {
       key: 2,
