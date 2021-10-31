@@ -6,7 +6,6 @@ node_modules
 .idea
 
 # yarn ignore (with zero installs)
-yarn.lock
 .yarn/*
 !.yarn/cache
 !.yarn/patches
